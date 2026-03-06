@@ -4,16 +4,20 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- Change this to just your name! -->
-        <title>[Your Name]'s Portfolio</title>
+        <!-- Change this to your name! -->
+        <title>Valentina's Portfolio</title>
         <link href="styles.css" rel="stylesheet"/>
-        <script src="main.js"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <!-- You can change the font here by replacing 12-14 with another one! -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double+Ink:wght@100..900&display=swap" rel="stylesheet"> 
     </head>
     <body>
+        <!-- This is a navigation bar where people can click through your webpage, You can add additional sections like your resume or a blog! You just need to add <a></a> underneath -->
         <nav class="navbar navbar-expand-lg">
             <div class="container">
-                <a class="navbar-brand" href="#">Valentina Fox</a>
+                <a class="navbar-brand" href="#">Valentina Fox 🦊</a>
                 <div class="navbar-nav">
                     <a class="nav-link" href="#home">Home</a>
                     <a class="nav-link" href="#about">About</a>
@@ -25,77 +29,110 @@
         
         <div class="home_page" id="home">
             <div class="home_section">
-                <!-- Change this to your name -->
                 <img class="pfp" src="images/profile_picture.jpg" alt="profile_pic" width="200" height="200">
-                <h1>Valentina Fox</h1>
-                <p>[Grade] . [School]</p>
-                <p>[Academic School Year]</p>
+                <!-- Change this to your name -->
+                <h1 id="name"></h1>
+                <!-- You can change these to your actual grade, school, and academic year -->
+                <p>9th Grade ~ Little Leaf Highschool ~ <strong><i>GPA:</i> 4.4</strong></p>
+                <p><strong>Academic Year [2018 - 2022]</strong></p>
+                <!-- Just a fun divider I added, if you search up cute text emojis, you can replace it with something else and it'll show up! You can edit the color via css -->
                 <p id="divider">°❀⋆.ೃ࿔*:･</p>
-                <p>[Favorite Quote]</p>
+                <!-- Try to find a quote you really like and you can put it on your profile -->
+                <p><i>"A bonfire is a big fire, right? So is an ocean just a bonlake?"</i></p>
             </div>
         </div>
         
         <div class="about_page" id="about">
             <div class="about_section">
-                <h1>About Me</h1>
+                <h1 id="cute_title">About Me</h1>
                 <!-- Add a statement of what you like to do, what skills you have, your passions, etc. -->
-                <p> Hi! I'm Valentina, a passionate student who loves bringing creativity into everything I do. Whether it's working on a new project, spending time outdoors, or exploring new hobbies, I always keep learning! I enjoy  🌸⭐</p>
+                <p> Hi! I'm Valentina, a passionate student who loves bringing creativity into everything I do. Whether it's working on a new project, spending time outdoors, exploring new hobbies, I always keep implementing! I love working with new technology and finding ways to gain new knowledge on other softwares!  🌸⭐</p>
             </div>
+            <!-- containers are from Bootstrapping -->
             <div class="container">
-                <div class="row">
+                <div class="row" style="margin-bottom: 20px;">
                     <div class="col-4">
                         <h2>Academic Strengths</h2>
                     </div>
                     <div class="col-8">
-                        <span class="tag">English</span>
-                        <span class="tag">Math</span>
-                        <span class="tag">AP Lang</span>
+                        <div class="tags-container">
+                        <!-- Change this to any strengths you have! You can add more just by doing <span> underneath the rest! -->
+                            <span class="tag">Good Problem-Solving Abilities</span>
+                            <span class="tag">Strong Leadership</span>
+                            <span class="tag">Empathetic</span>
+                            <span class="tag">...</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4" style="margin-bottom: 20px;">
+                        <h2>Extracurriculars</h2>
+                    </div>
+                    <div class="col-8">
+                        <div class="tags-container">
+                            <!-- Change this to any extracurriculars you take (including clubs)! -->
+                            <span class="tag">Volunteering</span>
+                            <span class="tag">Violin</span>
+                            <span class="tag">Art</span>
+                            <span class="tag">...</span>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-4">
-                        <h2>Extracurriculars</h2>
+                        <h2>Awards & Achievements</h2>
                     </div>
                     <div class="col-8">
-                        <span class="tag">Basketball</span>
-                        <span class="tag">Crochet</span>
-                        <span class="tag">Gardening</span>
+                        <div class="tags-container">
+                            <!-- Change this to any awards you've gotten! -->
+                            <span class="tag">AP Physics score of 5</span>
+                            <span class="tag">Member of School Newspaper</span>
+                            <span class="tag">Captain of Debate Team</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
        <div class="projects_page" id="projects">
-            <h1>Projects</h1>
+            <h1 id="cute_title">Projects</h1>
             <div class="projects_grid">
                 <div class="project_card">
-                    <h2>"Choose Your Own Adventure"</h2>
-                    <p>Description of your project here...</p>
+                    <!-- You can already add one project you completed! You can change the name to the story you made -->
+                    <h2>"Choose Your Own Adventure": The Case of the Stolen Backpack</h2>
+                    <p>I made a "Choose Your Own Adventure" style HTML/CSS project about a stolen backpack where users can click to choose different situations.</p>
+                    <a href="https://github.com/danieella/Workshop-Web-Application" target="_blank" class="github">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="50">
+                    </a>
                 </div>
                 <div class="project_card">
-                    <h2>Project Title</h2>
-                    <p>Description of your project here...</p>
+                    <!-- You can change this project to something else you're proud of -->
+                    <h2>EDGE MP3 Player Project</h2>
+                    <p>This project is when I built an embedded arduino/circuit system that plays music and has controls!</p>
+                    <!-- You can add a link to a google doc or to a picture using <a href="..."> -->
+                     <p>📄</p>
                 </div>
                 <div class="project_card">
-                    <h2>Project Title</h2>
-                    <p>Description of your project here...</p>
+                    <!-- You can change this project to something else you're proud of -->
+                    <h2>School Robotics Competition 2024 -- 2nd Place</h2>
+                    <p>Built a fully functional robotic arm using Arduino. Competed against 15 teams.</p>
+                    <p>🔬</p>
                 </div>
             </div>
         </div>
 
         <div class="contact_page" id="contact">
-            <div class="row">
-                <div class="col-3">
-                <h1>Contact</h1>
-                <p>Feel free to reach out!</p>
+            <div class="contact_container">
+                <div class="contact_desc">
+                    <h1 id="cute_title">Contact</h1>
+                    <p>Feel free to reach out!</p>
                 </div>
-                <div class="col-3">
-                    <div class="contact_card">
-                        <p>📧 <a href="mailto:youremail@email.com">youremail@email.com</a></p>
-                    </div>
+                <div class="contact_card">
+                    📧 <a href="mailto:edge.ucsd@gmail.com">edge.ucsd@gmail.com</a>
                 </div>
             </div>
         </div>
-        
+        <!-- Make sure instead of script being at the top with the css file, it's at the bottom so it can read all of the inputs -->
+        <script src="script.js"></script>
     </body>
 </html>

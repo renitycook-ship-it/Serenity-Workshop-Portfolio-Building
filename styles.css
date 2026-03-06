@@ -3,52 +3,74 @@ html {
 }
 
 body {
-  background: linear-gradient(135deg, #fff3e0, #ffe4e4, #fff0e8);;
+  background: linear-gradient(135deg, #fff3e0, #ffe4e4, #fff0e8); /* You can change the background color of your page, I did a gradient so you can choose multiple colors or just linear-gradient just to have one */
 }
 
+/* This makes sure whenever you click the nav-bar you can't see the page below, you can add .about_page if you want that section to be bigger! */
+.home_page, .projects_page {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* This is the navigation bar at the top of your webpage! */
 .navbar {
   position: fixed !important;
   top: 0 !important;
-  width: 100%;
-  background-color: white;
+  width: 100%; /* You can play around with the width if you'd like maybe if you just want it smaller! */
+  background-color: white; /* You can change the color of the whole bar! */
   z-index: 100;
 }
 
 .navbar .nav-link {
-  color: black;
+  color: black; /* You can change the color of the link to the other sections! */
 }
 
 .navbar-brand {
-  color: black;
+  color: black; /* You can change the color of both your name title! */
 }
 
 .navbar .nav-link:hover {
-    color: rgb(218, 95, 115);
+    color: rgb(218, 95, 115); /* This makes it so if you hover over the sections then it's a different color */
 }
 
 .navbar-brand:hover {
   color: rgb(218, 95, 115);
 }
 
+/* Home Page */
 .home_page {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   min-height: 100vh;
-  padding-top: 60px;
+  padding-top: 20px;
 }
 
 .home_section {
     padding: 100px;
 }
 
+/* This is where your profile picture is place */
 .pfp {
     display: block;
     margin: 0 auto;
     margin-top: 50px;
+    padding-bottom: 2px;
+    border-radius: 50%; /* You can delete or change your profile picture radius around the photo, I've made mine circular */
 }
 
+/* This is the animation where it's typing your name! */
+.cursor {
+  border-right: 3px solid black;
+  animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* About Page */
 .about_page {
     padding: 100px;
 }
@@ -57,18 +79,38 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
+  text-align: left;
   padding-bottom: 20px;
 }
 
+#cute_title {
+  font-family: "Bitcount Prop Double Ink", system-ui; /* You can change the font here it changes everything with the cute_title id */
+}
+
+/* This is your strengths/extracurricular blocks */
 .tag {
-    border: 1px solid black;
-    background-color: pink;
+    border: 1px solid rgb(245, 232, 209); /* You can change the border of your skills! */
+    background-color: pink; /* You can change the background color here! */
     border-radius: 5px;
     padding: 2px 8px;
     margin: 2px;
+    gap: 8px;
 }
 
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  transition: transform 0.3s ease; /* This makes it so the tags stick out of the webpage! */
+}
+
+.tag:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(199, 57, 98, 0.416); /* You can change the shadow it makes */
+  cursor: default;
+}
+
+/* Project Page */
 .projects_page {
   padding: 60px;
   text-align: center;
@@ -78,21 +120,27 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: center;
+  justify-content: left;
   margin-top: 30px;
 }
 
 .project_card {
-    border: 1px solid rgb(201, 72, 93);
+    border: 2px solid rgb(201, 72, 93); /* You can change the border color around the projects */
     border-radius: 10px;
     padding: 20px;
-    width: 300px;
+    width: 400px;
     text-align: left;
 }
 
-.home_page, .about_page, .projects_page {
-  min-height: 100vh;
-  overflow: hidden;
+.project_card h2 {
+  font-size: 20px;
+}
+
+/* Contact Page */
+.contact_container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
 .contact_page {
@@ -101,19 +149,42 @@ body {
   padding: 60px;
 }
 
+.contact_desc {
+  text-align: left;
+}
+
 .contact_card {
-  display: inline-block;
-  border: 1px solid #ccc;
+  display: flex;
+  border: 2px solid rgb(201, 72, 93); /* You can change the border around your email */
   border-radius: 10px;
-  padding: 10px 30px;
+  padding: 10px 20px;
   margin-top: 20px;
+  align-items: left;
+  width: fit-content;
+}
+
+.contact_card a:hover {
+  color: rgb(201, 72, 93) !important; /* You can change the hover of your email */
 }
 
 .contact_card a {
   text-decoration: none;
-  color: black;
+  color: black; /* You can change the color of the email link itself */
+}
+  
+#divider {
+    color: rgb(218, 95, 115); /* This is the divider at the home page between the academic year and the quote */
 }
 
-#divider {
-    color: rgb(201, 72, 93);
+/* Mobile Page */
+@media (max-width: 800px) {
+  .contact_container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .contact_page {
+    padding: 20px;
+  }
 }

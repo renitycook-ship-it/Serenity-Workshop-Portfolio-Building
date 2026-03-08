@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  background: linear-gradient(135deg, #fff3e0, #ffe4e4, #fff0e8); /* You can change the background color of your page, I did a gradient so you can choose multiple colors or just linear-gradient just to have one */
+  background: linear-gradient(135deg, #d3f8f9, #abfafa, #91f1e1); /* You can change the background color of your page, I did a gradient so you can choose multiple colors or just linear-gradient just to have one */
 }
 
 /* This makes sure whenever you click the nav-bar you can't see the page below, you can add .about_page if you want that section to be bigger! */
@@ -22,11 +22,11 @@ body {
 }
 
 .navbar, .nav-link {
-  color: black !important; /* You can change the color of the link to the other sections! */
+  color: rgb(5, 50, 78) !important; /* You can change the color of the link to the other sections! */
 }
 
 .navbar-brand {
-  color: black!important; /* You can change the color of both your name title! */
+  color: rgb(5, 50, 78)!important; /* You can change the color of both your name title! */
 }
 
 .navbar, .nav-link:hover {
@@ -62,7 +62,7 @@ body {
 
 /* This is the animation where it's typing your name! */
 .cursor {
-  border-right: 3px solid black;
+  border-right: 3px solid rgb(5, 50, 78);
   animation: blink 0.7s step-end infinite;
 }
 
@@ -90,7 +90,7 @@ body {
 
 .cute_title {
   font-family: "Bitcount Prop Double Ink", system-ui; /* You can change the font here it changes everything with the cute_title id */
-  color: black !important;
+  color: rgb(8, 73, 122) !important;
 }
 
 /* This is your strengths/extracurricular blocks */
@@ -117,6 +117,7 @@ body {
   cursor: default;
 }
 
+
 /* ==== Project Page ==== */
 .projects_page {
   padding: 60px;
@@ -132,7 +133,7 @@ body {
 }
 
 .project_card {
-    border: 2px solid rgb(201, 72, 93); /* You can change the border color around the projects */
+    border: 2px solid rgb(0, 183, 255); /* You can change the border color around the projects */
     border-radius: 10px;
     padding: 20px;
     width: 400px;
@@ -170,7 +171,7 @@ body {
 
 .contact_card {
   display: flex;
-  border: 2px solid rgb(201, 72, 93); /* You can change the border around your email */
+  border: 2px solid rgb(0, 183, 255); /* You can change the border around your email */
   border-radius: 10px;
   padding: 10px 20px;
   align-items: left;

@@ -1,5 +1,5 @@
 // const is that the value never changes makes it so your name is typed out, then let is another way of saying you're naming the variable so i is 0 and deleting is false
-const studentName = "Valentina Fox"; /* Make sure to change this to your name! */
+const studentName = "Serenity Cook"; /* Make sure to change this to your name! */
 let i = 0;
 let deleting = false;
 
